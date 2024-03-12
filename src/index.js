@@ -3,29 +3,40 @@ import theme from "./theme";
 
 /** @type {import("tailwindcss/types/config").PluginCreator} */
 const pluginCreator = api => {
-  // const { theme, addUtilities, matchUtilities } = api;
-  const { addUtilities } = api;
+  const { addComponents, matchUtilities, theme } = api;
 
-  // const dynamicUtils = {
-  //   "tooltip-t-bg": { css: "background-color", values: theme("bacgroundColor") },
-  //   "tooltip-t-text": { css: "color", values: theme("color") }
-  // }
+  matchUtilities(
+    {
+      "tooltip-bg": value => ({
+        "&::after": {
+          "background-color": value,
+        },
+      }),
+    },
+    {
+      values: theme("backgroundColor"),
+    }
+  );
 
-  // Object.entries(dynamicUtils).forEach(([name, { css, values }]) => {
-  //   matchUtilities({
-  //     [name]: value => ({
-  //       [css]: value
-  //     })
-  //   }, {
-  //     values
-  //   })
-  // })
+  matchUtilities(
+    {
+      "tooltip-text": value => ({
+        "&::after": {
+          "color": value,
+        },
+      }),
+    },
+    {
+      values: theme("color"),
+    }
+  );
 
-  addUtilities({
+  addComponents({
     ".tooltip-wrapper": {
       "margin-top": "10px",
       "width": "fit-content"
     },
+    
     ".tooltip-t": {
       "position": "relative",
       "&::before": {
@@ -54,7 +65,7 @@ const pluginCreator = api => {
         "height": "30px",
         "display": "flex",
         "align-items": "center",
-        "padding": "0 0.55px",
+        "padding": "0 5px",
         "top": 0,
         "left": "50%",
         "transform": "translate(-50%, 0)",
@@ -98,7 +109,7 @@ const pluginCreator = api => {
         "height": "30px",
         "display": "flex",
         "align-items": "center",
-        "padding": "0 0.55px",
+        "padding": "0 5px",
         "top": 0,
         "left": 0,
       },
@@ -141,7 +152,7 @@ const pluginCreator = api => {
         "height": "30px",
         "display": "flex",
         "align-items": "center",
-        "padding": "0 0.55px",
+        "padding": "0 5px",
         "top": 0,
         "right": 0,
       },
@@ -184,7 +195,7 @@ const pluginCreator = api => {
         "height": "30px",
         "display": "flex",
         "align-items": "center",
-        "padding": "0 0.55px",
+        "padding": "0 5px",
         "bottom": 0,
         "left": "50%",
         "transform": "translate(-50%, 0)",
