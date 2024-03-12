@@ -14,6 +14,9 @@ dependencies:
   astro:
     specifier: ^4.5.1
     version: 4.5.1
+  tailwind-tooltip:
+    specifier: ^0.0.2
+    version: 0.0.2(tailwindcss@3.4.1)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -3315,6 +3318,14 @@ packages:
   /supports-preserve-symlinks-flag@1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+    dev: false
+
+  /tailwind-tooltip@0.0.2(tailwindcss@3.4.1):
+    resolution: {integrity: sha512-YGjy01YRIeHgRbJ0bLrd2EPRIUnA/Yg7Dp4t/3vagW7u+NFEShhf5qoR0NotLCDs38zlzWOK7d2U27AKL5u0mQ==}
+    peerDependencies:
+      tailwindcss: ^3.0.0
+    dependencies:
+      tailwindcss: 3.4.1
     dev: false
 
   /tailwindcss@3.4.1:

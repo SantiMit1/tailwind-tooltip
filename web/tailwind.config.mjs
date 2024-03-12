@@ -1,4 +1,4 @@
-import tooltip from "../src/index.js"
+import tooltip from "tailwind-tooltip"
 
 /** @type {import('tailwindcss').Config} */
 export default {
