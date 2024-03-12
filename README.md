@@ -4,7 +4,7 @@
 
 Tooltip an element using only CSS classes!
 
-Visit the [website](https://github.com/SantiMit1/tailwind-tooltip) to get more information.
+Visit the [website](https://github.com/SantiMit1/tailwind-tooltip) to see a demo.
 </div>
   
 ## Installation :book:
