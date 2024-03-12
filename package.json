@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-tooltip",
+  "name": "@santimit/tailwind-tooltip",
   "version": "0.0.1",
-  "description": "",
+  "description": "Tailwind plugin to add tooltips to your elements",
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
