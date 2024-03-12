@@ -11,6 +11,9 @@ const pluginCreator = api => {
         "&::after": {
           "background-color": value,
         },
+        "&::before": {
+          "background-color": value,
+        }
       }),
     },
     {
@@ -41,7 +44,7 @@ const pluginCreator = api => {
       "position": "relative",
       "&::before": {
         "position": "absolute",
-        "content": " ",
+        "content": "var(--tw-content)",
         "width": "15px",
         "height": "15px",
         "z-index": "9999",
@@ -85,7 +88,7 @@ const pluginCreator = api => {
       "position": "relative",
       "&::before": {
         "position": "absolute",
-        "content": " ",
+        "content": "var(--tw-content)",
         "width": "15px",
         "height": "15px",
         "z-index": "9999",
@@ -128,7 +131,7 @@ const pluginCreator = api => {
       "position": "relative",
       "&::before": {
         "position": "absolute",
-        "content": " ",
+        "content": "var(--tw-content)",
         "width": "15px",
         "height": "15px",
         "z-index": "9999",
@@ -171,7 +174,7 @@ const pluginCreator = api => {
       "position": "relative",
       "&::before": {
         "position": "absolute",
-        "content": " ",
+        "content": "var(--tw-content)",
         "width": "15px",
         "height": "15px",
         "z-index": "9999",
