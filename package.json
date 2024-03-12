@@ -1,7 +1,7 @@
 {
   "name": "tailwind-tooltip",
-  "version": "0.0.1",
-  "description": "Tailwind plugin to add tooltips to your elements",
+  "version": "0.0.2",
+  "description": "Tooltip an element using only CSS classes!",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SantiMit1/tailwind-tooltip.git"
@@ -9,7 +9,12 @@
   "keywords": [
     "tailwindcss",
     "tooltip",
-    "tailwind"
+    "tailwind",
+    "web",
+    "components",
+    "ssr",
+    "css",
+    "ui"
   ],
   "main": "./src/index.js",
   "type": "module",

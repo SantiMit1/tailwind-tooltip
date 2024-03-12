@@ -62,3 +62,11 @@ export default {
   </div>
 </div>
 ```
+
+```html
+<div class="tooltip-wrapper">
+  <div class="tooltip-t tooltip-transition-default" data-tooltip-text="This is a tooltip!"> <-- add transitions
+    Hover over me!
+  </div>
+</div>
+```

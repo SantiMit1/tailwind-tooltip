@@ -34,6 +34,22 @@ const pluginCreator = api => {
     }
   );
 
+  matchUtilities(
+    {
+      "tooltip-transition": value => ({
+        "&::after": {
+          "transition": value,
+        },
+        "&::before": {
+          "transition": value,
+        }
+      }),
+    },
+    {
+      values: theme("transition"),
+    }
+  )
+
   addComponents({
     ".tooltip-wrapper": {
       "margin-top": "10px",
@@ -49,7 +65,6 @@ const pluginCreator = api => {
         "height": "15px",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "top": 0,
         "left": "50%",
@@ -63,7 +78,6 @@ const pluginCreator = api => {
         "text-align": "center",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "height": "30px",
         "display": "flex",
@@ -93,7 +107,6 @@ const pluginCreator = api => {
         "height": "15px",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "top": "25%",
         "left": 0,
@@ -107,7 +120,6 @@ const pluginCreator = api => {
         "text-align": "center",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "height": "30px",
         "display": "flex",
@@ -136,7 +148,6 @@ const pluginCreator = api => {
         "height": "15px",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "top": "25%",
         "right": 0,
@@ -150,7 +161,6 @@ const pluginCreator = api => {
         "text-align": "center",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "height": "30px",
         "display": "flex",
@@ -179,7 +189,6 @@ const pluginCreator = api => {
         "height": "15px",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "bottom": 0,
         "left": "50%",
@@ -193,7 +202,6 @@ const pluginCreator = api => {
         "text-align": "center",
         "z-index": "9999",
         "opacity": 0,
-        "transition": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
         "pointer-events": "none",
         "height": "30px",
         "display": "flex",
