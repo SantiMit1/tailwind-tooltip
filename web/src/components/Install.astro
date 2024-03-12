@@ -1,0 +1,52 @@
+---
+import { Code } from "astro:components";
+import Copy from "@/components/icons/Copy.astro";
+---
+
+<section class="mt-5 space-y-3">
+  <div>
+    <span class="text-sm font-semibold opacity-80">
+      1. Install the dependency
+    </span>
+    <div
+      class="flex w-full max-w-md items-center justify-between gap-x-2 rounded-xl bg-[#282A36] py-1 pl-4 pr-1 text-center text-white backdrop-blur"
+    >
+      <pre
+        class="flex text-sm">
+              <Code wrap={true} code='npm install tailwind-tooltip' theme="dracula" />
+            </pre>
+      <button
+        id="copyNpmInstall"
+        aria-label="Copy npm install command"
+        data-tooltip-text="Copy to clipboard"
+        class="tooltip-r tooltip-bg-[#282A36] tooltip-text-white ring-offset-background focus-visible:ring-ring inline-flex size-7 items-center justify-center whitespace-nowrap rounded-full bg-white/10 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none"
+      >
+        <Copy />
+      </button>
+    </div>
+  </div>
+  <div>
+    <span class="text-sm font-semibold opacity-80"
+      >2. Add the plugin to your configuration</span
+    >
+    <div
+      class="flex w-full max-w-md items-center gap-x-2 rounded-xl bg-[#282A36] py-3 pl-4 pr-4 text-center text-white backdrop-blur"
+    >
+      <pre
+        class="flex text-left text-xs">
+      <Code wrap={true} theme="dracula" lang="js" code={`import tooltip from 'tailwind-tooltip'
+export default {
+  // ...rest of the options
+  plugins: [animations],
+}`} />
+    </pre>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("copyNpmInstall").addEventListener("click", () => {
+    const code = "npm install tailwind-tooltip";
+    navigator.clipboard.writeText(code);
+  });
+</script>
