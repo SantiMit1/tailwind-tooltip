@@ -66,3 +66,13 @@ export default {
       Hover me!
     </button>
 ```
+
+```html
+    <button
+      id="tooltip-top"
+      class="tooltip-t tooltip-size-xl" <-- change tooltip colors
+      data-tooltip-text="Copy to clipboard"
+    >
+      Hover me!
+    </button>
+```

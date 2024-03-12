@@ -5,50 +5,30 @@ import theme from "./theme";
 const pluginCreator = api => {
   const { addComponents, matchUtilities, theme } = api;
 
-  matchUtilities(
-    {
-      "tooltip-bg": value => ({
-        "&::after": {
-          "background-color": value,
-        },
-        "&::before": {
-          "background-color": value,
-        }
-      }),
-    },
-    {
-      values: theme("backgroundColor"),
-    }
-  );
+  const dynamicUtilities = {
+    "tooltip-bg": {css: "background-color", values: theme("backgroundColor")},
+    "tooltip-text": {css: "color", values: theme("color")},
+    "tooltip-transition": {css: "transition", values: theme("transition")},
+    "tooltip-size": {css: "font-size", values: theme("fontSize")},
+  }
 
-  matchUtilities(
-    {
-      "tooltip-text": value => ({
-        "&::after": {
-          "color": value,
-        },
-      }),
-    },
-    {
-      values: theme("color"),
-    }
-  );
-
-  matchUtilities(
-    {
-      "tooltip-transition": value => ({
-        "&::after": {
-          "transition": value,
-        },
-        "&::before": {
-          "transition": value,
-        }
-      }),
-    },
-    {
-      values: theme("transition"),
-    }
-  )
+  Object.entries(dynamicUtilities).forEach(([utility, {css, values}]) => {
+    matchUtilities(
+      {
+        [utility]: value => ({
+          "&::after": {
+            [css]: value,
+          },
+          "&::before": {
+            [css]: value,
+          }
+        }),
+      },
+      {
+        values
+      }
+    );
+  })
 
   addComponents({
     ".tooltip-t": {
@@ -75,7 +55,8 @@ const pluginCreator = api => {
         "z-index": "9999",
         "opacity": 0,
         "pointer-events": "none",
-        "height": "30px",
+        "height": "auto",
+        "min-height": "35px",
         "display": "flex",
         "align-items": "center",
         "padding": "0 5px",
@@ -114,7 +95,8 @@ const pluginCreator = api => {
         "z-index": "9999",
         "opacity": 0,
         "pointer-events": "none",
-        "height": "30px",
+        "height": "auto",
+        "min-height": "35px",
         "display": "flex",
         "align-items": "center",
         "padding": "0 5px",
@@ -153,7 +135,8 @@ const pluginCreator = api => {
         "z-index": "9999",
         "opacity": 0,
         "pointer-events": "none",
-        "height": "30px",
+        "height": "auto",
+        "min-height": "35px",
         "display": "flex",
         "align-items": "center",
         "padding": "0 5px",
@@ -192,7 +175,8 @@ const pluginCreator = api => {
         "z-index": "9999",
         "opacity": 0,
         "pointer-events": "none",
-        "height": "30px",
+        "height": "auto",
+        "min-height": "35px",
         "display": "flex",
         "align-items": "center",
         "padding": "0 5px",
