@@ -70,7 +70,7 @@ export default {
 ```html
     <button
       id="tooltip-top"
-      class="tooltip-t tooltip-size-xl" <-- change tooltip colors
+      class="tooltip-t tooltip-size-xl" <-- change tooltip size
       data-tooltip-text="Copy to clipboard"
     >
       Hover me!
