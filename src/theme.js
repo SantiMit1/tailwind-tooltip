@@ -26,6 +26,6 @@ export default {
     ...flatColors,
   },
   transition: {
-    "default": "all cubic-bezier(0.17, 0.67, 0.5, 0.71) 100ms",
+    "default": "opacity 300ms",
   }
 }

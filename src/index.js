@@ -51,11 +51,6 @@ const pluginCreator = api => {
   )
 
   addComponents({
-    ".tooltip-wrapper": {
-      "margin-top": "10px",
-      "width": "fit-content"
-    },
-    
     ".tooltip-t": {
       "position": "relative",
       "&::before": {
@@ -68,7 +63,8 @@ const pluginCreator = api => {
         "pointer-events": "none",
         "top": 0,
         "left": "50%",
-        "transform": "translate(-50%, 0) rotate(45deg)",
+        "transform": "translate(-50%, calc(-100% - 5px)) rotate(45deg)",
+        "visibility": "hidden"
       },
       "&::after": {
         "content": "attr(data-tooltip-text)",
@@ -85,16 +81,12 @@ const pluginCreator = api => {
         "padding": "0 5px",
         "top": 0,
         "left": "50%",
-        "transform": "translate(-50%, 0)",
+        "transform": "translate(-50%, calc(-100% - 10px))",
+        "visibility": "hidden"
       },
       "&:hover::before, &:hover::after": {
         "opacity": "1",
-      },
-      "&:hover::before": {
-        "transform": "translate(-50%, calc(-100% - 5px)) rotate(45deg)",
-      },
-      "&:hover::after": {
-        "transform": "translate(-50%, calc(-100% - 10px))",
+        "visibility": "visible"
       },
     },
 
@@ -110,7 +102,8 @@ const pluginCreator = api => {
         "pointer-events": "none",
         "top": "25%",
         "left": 0,
-        "transform": "translate(0, 0%) rotate(45deg)",
+        "transform": "translate(calc(-100% - 5px)) rotate(45deg)",
+        "visibility": "hidden",
       },
       "&::after": {
         "content": "attr(data-tooltip-text)",
@@ -127,15 +120,12 @@ const pluginCreator = api => {
         "padding": "0 5px",
         "top": 0,
         "left": 0,
+        "transform": "translate(calc(-100% - 10px))",
+        "visibility": "hidden",
       },
       "&:hover::before, &:hover::after": {
         "opacity": "1",
-      },
-      "&:hover::before": {
-        "transform": "translate(calc(-100% - 5px)) rotate(45deg)",
-      },
-      "&:hover::after": {
-        "transform": "translate(calc(-100% - 10px))",
+        "visibility": "visible"
       },
     },
 
@@ -151,7 +141,8 @@ const pluginCreator = api => {
         "pointer-events": "none",
         "top": "25%",
         "right": 0,
-        "transform": "translate(-50%, 0) rotate(45deg)",
+        "transform": "translate(calc(100% + 5px)) rotate(45deg)",
+        "visibility": "hidden"
       },
       "&::after": {
         "content": "attr(data-tooltip-text)",
@@ -168,15 +159,12 @@ const pluginCreator = api => {
         "padding": "0 5px",
         "top": 0,
         "right": 0,
+        "transform": "translate(calc(100% + 10px))",
+        "visibility": "hidden"
       },
       "&:hover::before, &:hover::after": {
         "opacity": "1",
-      },
-      "&:hover::before": {
-        "transform": "translate(calc(100% + 5px)) rotate(45deg)",
-      },
-      "&:hover::after": {
-        "transform": "translate(calc(100% + 10px))",
+        "visibility": "visible"
       },
     },
 
@@ -192,7 +180,8 @@ const pluginCreator = api => {
         "pointer-events": "none",
         "bottom": 0,
         "left": "50%",
-        "transform": "translate(-50%, 0) rotate(45deg)",
+        "transform": "translate(-50%, calc(100% + 5px)) rotate(45deg)",
+        "visibility": "hidden"
       },
       "&::after": {
         "content": "attr(data-tooltip-text)",
@@ -209,16 +198,12 @@ const pluginCreator = api => {
         "padding": "0 5px",
         "bottom": 0,
         "left": "50%",
-        "transform": "translate(-50%, 0)",
+        "transform": "translate(-50%, calc(100% + 10px))",
+        "visibility": "hidden"
       },
       "&:hover::before, &:hover::after": {
         "opacity": "1",
-      },
-      "&:hover::before": {
-        "transform": "translate(-50%, calc(100% + 5px)) rotate(45deg)",
-      },
-      "&:hover::after": {
-        "transform": "translate(-50%, calc(100% + 10px))",
+        "visibility": "visible"
       },
     }
   });
