@@ -1,5 +1,5 @@
 {
-  "name": "@santimit/tailwind-tooltip",
+  "name": "tailwind-tooltip",
   "version": "0.0.1",
   "description": "Tailwind plugin to add tooltips to your elements",
   "repository": {

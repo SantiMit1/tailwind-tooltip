@@ -15,15 +15,15 @@ Visit the [website](https://github.com/SantiMit1/tailwind-tooltip) to get more i
 
 - npm
 ```bash
-npm install @santimit/tailwind-tooltip
+npm install tailwind-tooltip
 ```
 - pnpm
 ```bash
-pnpm install @santimit/tailwind-tooltip
+pnpm install tailwind-tooltip
 ```
 - yarn
 ```bash
-yarn add @santimit/tailwind-tooltip
+yarn add tailwind-tooltip
 ```
 
 #### Plugin Implementation
@@ -31,7 +31,7 @@ yarn add @santimit/tailwind-tooltip
 
 ```js
 // tailwind.config.mjs
-import tooltip from '@santimit/tailwind-tooltip'
+import tooltip from 'tailwind-tooltip'
 
 export default {
   // rest of the options
