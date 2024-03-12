@@ -1,0 +1,84 @@
+<section class="mt-3">
+  <span class="text-sm font-semibold opacity-80">
+    3. Start using tooltip classes
+  </span>
+  <div
+    class="flex flex-col md:flex-row items-stretch md:justify-center justify-start mt-5 gap-5"
+  >
+    <button
+      id="tooltip-top"
+      class="bg-slate-800 text-white px-4 py-2 rounded-md tooltip-t md:order-2 tooltip-bg-slate-800 tooltip-text-white"
+      data-tooltip-text="Copy to clipboard"
+    >
+      Top
+    </button>
+    <button
+      id="tooltip-left"
+      class="bg-slate-800 text-white px-4 py-2 rounded-md tooltip-l md:order-1 tooltip-bg-slate-800 tooltip-text-white"
+      data-tooltip-text="Copy to clipboard"
+    >
+      Left
+    </button>
+    <button
+      id="tooltip-right"
+      class="bg-slate-800 text-white px-4 py-2 rounded-md tooltip-r md:order-4 tooltip-bg-slate-800 tooltip-text-white"
+      data-tooltip-text="Copy to clipboard"
+    >
+      Right
+    </button>
+    <button
+      id="tooltip-bottom"
+      class="bg-slate-800 text-white px-4 py-2 rounded-md tooltip-b md:order-3 tooltip-bg-slate-800 tooltip-text-white"
+      data-tooltip-text="Copy to clipboard"
+    >
+      Bottom
+    </button>
+  </div>
+</section>
+
+<script>
+  const tooltipTop = document.getElementById("tooltip-top");
+  const tooltipLeft = document.getElementById("tooltip-left");
+  const tooltipRight = document.getElementById("tooltip-right");
+  const tooltipBottom = document.getElementById("tooltip-bottom");
+
+  tooltipTop.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+      '<button class="tooltip-t tooltip-bg-slate-800 tooltip-text-white">Hover Me!</button>'
+    );
+    tooltipTop.attributes["data-tooltip-text"].value = "Copied!";
+  });
+  tooltipTop.addEventListener("mouseleave", () => {
+    tooltipTop.attributes["data-tooltip-text"].value = "Copy to clipboard";
+  });
+
+  tooltipLeft.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+      '<button class="tooltip-l tooltip-bg-slate-800 tooltip-text-white">Hover Me!</button>'
+    );
+    tooltipLeft.attributes["data-tooltip-text"].value = "Copied!";
+  });
+  tooltipLeft.addEventListener("mouseleave", () => {
+    tooltipLeft.attributes["data-tooltip-text"].value = "Copy to clipboard";
+  });
+
+  tooltipRight.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+      '<button class="tooltip-r tooltip-bg-slate-800 tooltip-text-white">Hover Me!</button>'
+    );
+    tooltipRight.attributes["data-tooltip-text"].value = "Copied!";
+  });
+  tooltipRight.addEventListener("mouseleave", () => {
+    tooltipRight.attributes["data-tooltip-text"].value = "Copy to clipboard";
+  });
+
+  tooltipBottom.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+      '<button class="tooltip-b tooltip-bg-slate-800 tooltip-text-white">Hover Me!</button>'
+    );
+    tooltipBottom.attributes["data-tooltip-text"].value = "Copied!";
+  });
+  tooltipBottom.addEventListener("mouseleave", () => {
+    tooltipBottom.attributes["data-tooltip-text"].value = "Copy to clipboard";
+  });
+</script>
