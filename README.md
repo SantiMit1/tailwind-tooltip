@@ -27,7 +27,7 @@ yarn add tailwind-tooltip
 ```
 
 #### Plugin Implementation
-> Use the plugin in your Tailwind CSS project:
+> Add the plugin to your Tailwind CSS project:
 
 ```js
 // tailwind.config.mjs
@@ -45,28 +45,24 @@ export default {
 
 #### Example
 
-> Here are some simple examples of how to use this plugin and its animations:
+> Here are some simple examples of how to use this plugin:
 
 ```html
-<div class="tooltip-wrapper"> <-- add a wrapper container
-  <div class="tooltip-t" data-tooltip-text="This is a tooltip!"> <-- add the tooltip position and content
-    Hover over me!
-  </div>
-</div>
+    <button
+      id="tooltip-top"
+      class="tooltip-t" <-- add a tooltip
+      data-tooltip-text="Copy to clipboard" <-- add tooltip text
+    >
+      Hover me!
+    </button>
 ```
 
 ```html
-<div class="tooltip-wrapper">
-  <div class="tooltip-t tooltip-bg-slate-700 text-black" data-tooltip-text="This is a tooltip!"> <-- change background and text colors
-    Hover over me!
-  </div>
-</div>
-```
-
-```html
-<div class="tooltip-wrapper">
-  <div class="tooltip-t tooltip-transition-default" data-tooltip-text="This is a tooltip!"> <-- add transitions
-    Hover over me!
-  </div>
-</div>
+    <button
+      id="tooltip-top"
+      class="tooltip-t tooltip-bg-slate-800 tooltip-text-white" <-- change tooltip colors
+      data-tooltip-text="Copy to clipboard"
+    >
+      Hover me!
+    </button>
 ```
