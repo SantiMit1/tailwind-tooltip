@@ -1,6 +1,6 @@
 {
   "name": "tailwind-tooltip",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Tooltip an element using only CSS classes!",
   "repository": {
     "type": "git",
